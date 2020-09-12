@@ -1,0 +1,24 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="content-type" charset="utf-8">
+        <title>ぱちぱち単語生成器</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    -->
+        <script src="show_words.js"></script>
+    </head>
+    <body style="margin: 0px;">
+        <div id="wrapper">
+            <canvas id="main_cnavas" width="100" height="200"></canvas>
+        </div>
+        <form onsubmit="return button1Click()">
+            <input id="input1" type="text" name="name" value="もぁぱち"></input>
+        </form>
+        <button id="button1" onclick="button1Click();">put</button>
+        <button id="button2" onclick="button2Click();">clear</button>
+            
+    </body>
+</html>
