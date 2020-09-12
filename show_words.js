@@ -49,6 +49,15 @@ function clearArray(){
     text_array.length=0;
 }
 
+document.getElementById("modalOpen").addEventListener("click",function(){
+    document.getElementById("modal").classList.add("active");
+    document.getElementById("mask").classList.add("active");
+})
+document.getElementById("mask").addEventListener("click",function(){
+    document.getElementById("modal").classList.remove("active");
+    document.getElementById("mask").classList.remove("active");
+})
+
 $(window).resize(FitCanvas)
 
 
@@ -60,7 +69,7 @@ function AddText(text){
     let a=Math.floor(Math.random()*5);
     font_name="px "+font_family_list[1];
     var x=w*Math.random();
-    var y=-100;
+    var y=h+100;
 
     text_array.push([text,px,font_name,x,y]);
     //console.log(text_array.length);
@@ -78,8 +87,8 @@ function Render(){
         context.font=text_array[i][1]+text_array[i][2];
         context.textAlign = 'center'; 
         context.fillStyle='black';
-        text_array[i][4]=text_array[i][4]+text_array[i][1]*0.03;
-        if(text_array[i][4]<h+100){
+        text_array[i][4]=text_array[i][4]-text_array[i][1]*0.03;
+        if(text_array[i][4]>-100){
             context.fillText(text_array[i][0],text_array[i][3],text_array[i][4]);
         }else{
             text_array.splice(i,1);
