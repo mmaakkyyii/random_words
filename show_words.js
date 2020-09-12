@@ -62,7 +62,7 @@ function AddText(text){
     var y=-100;
 
     text_array.push([text,px,font_name,x,y]);
-    //console.log(text_array);
+    console.log(text_array.length);
 
 }
 
@@ -89,5 +89,5 @@ function Render(){
 }
 
 setInterval(()=>{Render();},30);
-setInterval(()=>{AddText(document.getElementById('input1').value);},700);
+setInterval(()=>{AddText(GenerateWord());},700);
 
