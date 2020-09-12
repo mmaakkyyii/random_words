@@ -1,28 +1,32 @@
+const font_family_list = ["sans-serif","serif","cursive","fantasy","monospace"];
+var text_array = new Array();
+
+
 $(document).ready(() => {
     FitCanvas();
 });
 
-var t=0;
+var t_for_GB_Gradation=0;
 function SetBG(){
 
     let w=$( window ).width();
     let h=$( window ).height();
-
-    var canvas = document.getElementById('main_cnavas');
-    var rectangle = canvas.getContext('2d');
+    let t = t_for_GB_Gradation;
+    let canvas = document.getElementById('main_cnavas');
+    let rectangle = canvas.getContext('2d');
     rectangle.beginPath();
-    var rectangle_color= rectangle.createLinearGradient(0, 0, w, h);
-    var color1= 'rgb('+Math.floor(25*Math.sin(t+2*t)+220)+','+Math.floor(25*Math.sin(t+3*t+1)+220)+','+Math.floor(25*Math.sin(t+3*t*2)+220)+')';
-    var color2= 'rgb('+Math.floor(25*Math.sin(t+1.2*t+1)+220)+','+Math.floor(25*Math.sin(t+0.6*t)+220)+','+Math.floor(25*Math.sin(0.8*t+2*t*2+3)+220)+')';
+    let rectangle_color= rectangle.createLinearGradient(0, 0, w, h);
+    let color1= 'rgb('+Math.floor(25*Math.sin(t+2*t)+220)+','+Math.floor(25*Math.sin(t+3*t+1)+220)+','+Math.floor(25*Math.sin(t+3*t*2)+220)+')';
+    let color2= 'rgb('+Math.floor(25*Math.sin(t+1.2*t+1)+220)+','+Math.floor(25*Math.sin(t+0.6*t)+220)+','+Math.floor(25*Math.sin(0.8*t+2*t*2+3)+220)+')';
     rectangle_color.addColorStop(0.0, color1);
     rectangle_color.addColorStop(1.0, color2);
     rectangle.fillStyle = rectangle_color;
     rectangle.fillRect(0, 0, w, h);
-    t+=0.005;    
+    t_for_GB_Gradation+=0.005;    
 }
 
 function FitCanvas(){
-    var canvas = document.getElementById('main_cnavas');
+    let canvas = document.getElementById('main_cnavas');
     let w=$( window ).width();
     let h=$( window ).height();
     canvas.width=w*1;
@@ -47,8 +51,6 @@ function clearArray(){
 
 $(window).resize(FitCanvas)
 
-var font_family_list = ["sans-serif","serif","cursive","fantasy","monospace"];
-var text_array = new Array();
 
 function AddText(text){
     var w = $( window ).width();
@@ -87,5 +89,5 @@ function Render(){
 }
 
 setInterval(()=>{Render();},30);
-setInterval(()=>{AddText(document.getElementById('input1').value);},500);
+setInterval(()=>{AddText(document.getElementById('input1').value);},700);
 
