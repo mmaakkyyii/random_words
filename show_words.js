@@ -3,17 +3,13 @@ $(document).ready(() => {
 });
 
 var t=0;
+function SetBG(){
 
-function FitCanvas(){
-    var canvas = document.getElementById('main_cnavas');
-    //console.log(canvas);
     let w=$( window ).width();
     let h=$( window ).height();
-    canvas.width=w*1;
-    canvas.height=h*1;
 
+    var canvas = document.getElementById('main_cnavas');
     var rectangle = canvas.getContext('2d');
-
     rectangle.beginPath();
     var rectangle_color= rectangle.createLinearGradient(0, 0, w, h);
     var color1= 'rgb('+Math.floor(25*Math.sin(t+2*t)+220)+','+Math.floor(25*Math.sin(t+3*t+1)+220)+','+Math.floor(25*Math.sin(t+3*t*2)+220)+')';
@@ -22,8 +18,17 @@ function FitCanvas(){
     rectangle_color.addColorStop(1.0, color2);
     rectangle.fillStyle = rectangle_color;
     rectangle.fillRect(0, 0, w, h);
-    t+=0.005;
-    
+    t+=0.005;    
+}
+
+function FitCanvas(){
+    var canvas = document.getElementById('main_cnavas');
+    let w=$( window ).width();
+    let h=$( window ).height();
+    canvas.width=w*1;
+    canvas.height=h*1;
+
+    SetBG();
 }
 
 function button1Click() {
@@ -31,9 +36,11 @@ function button1Click() {
     AddText(text1);
     return false;
 };
+
 function button2Click() {
     clearArray();
 };
+
 function clearArray(){
     text_array.length=0;
 }
@@ -44,22 +51,18 @@ var font_family_list = ["sans-serif","serif","cursive","fantasy","monospace"];
 var text_array = new Array();
 
 function AddText(text){
-    //console.log(text);
     var w = $( window ).width();
     var h = $( window ).height();
     px=20+Math.floor(Math.random()*80);
     let a=Math.floor(Math.random()*5);
-    //console.log(a);
     font_name="px "+font_family_list[1];
     var x=w*Math.random();
     var y=-100;
 
     text_array.push([text,px,font_name,x,y]);
     //console.log(text_array);
-    Render();
 
 }
-
 
 function Render(){
     var canvas = document.getElementById('main_cnavas');
@@ -74,7 +77,6 @@ function Render(){
         context.fillStyle='black';
         text_array[i][4]=text_array[i][4]+text_array[i][1]*0.03;
         if(text_array[i][4]<h+100){
-            //console.log(text_array[i][3]);
             context.fillText(text_array[i][0],text_array[i][3],text_array[i][4]);
         }else{
             text_array.splice(i,1);
@@ -84,9 +86,6 @@ function Render(){
 
 }
 
-function ChangeBG(){
-}
 setInterval(()=>{Render();},30);
 setInterval(()=>{AddText(document.getElementById('input1').value);},500);
-setInterval(()=>{ChangeBG();},1000);
 
