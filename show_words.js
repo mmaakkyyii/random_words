@@ -53,6 +53,7 @@ $(window).resize(FitCanvas)
 
 
 function AddText(text){
+    if(text_array.length>200)return;
     var w = $( window ).width();
     var h = $( window ).height();
     px=20+Math.floor(Math.random()*80);
@@ -62,7 +63,7 @@ function AddText(text){
     var y=-100;
 
     text_array.push([text,px,font_name,x,y]);
-    console.log(text_array.length);
+    //console.log(text_array.length);
 
 }
 
