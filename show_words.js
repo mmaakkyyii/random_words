@@ -1,12 +1,14 @@
 const font_family_list = ["sans-serif","serif","cursive","fantasy","monospace"];
 var text_array = new Array();
 
-
 $(document).ready(() => {
     FitCanvas();
 });
 
+$(window).resize(FitCanvas)
+
 var t_for_GB_Gradation=0;
+
 function SetBG(){
 
     let w=$( window ).width();
@@ -38,10 +40,6 @@ function FitCanvas(){
 function clearArray(){
     text_array.length=0;
 }
-
-
-$(window).resize(FitCanvas)
-
 
 function AddText(text){
     if(text_array.length>200)return;
