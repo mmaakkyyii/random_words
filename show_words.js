@@ -89,6 +89,7 @@ function Render(){
         context.fillStyle='black';
         text_array[i][4]=text_array[i][4]-text_array[i][1]*0.03;
         if(text_array[i][4]>-100){
+            context.globalAlpha=Math.max(0,1-text_array[i][4]/h)*0.9;
             context.fillText(text_array[i][0],text_array[i][3],text_array[i][4]);
         }else{
             text_array.splice(i,1);
