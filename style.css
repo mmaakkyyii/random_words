@@ -1,18 +1,51 @@
 @charset "utf-8";
 
-
+.form{
+}
 .modalOpen{
-    padding: 5px;
     border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 200px;
-    height: 40px;
-    background-color: rgb(195, 241, 255);
+    width: 100%;
+    height: 50px;
+    background-color: rgb(184, 184, 184);
     color: black;
-    font-size: 15x;
-    font-size: 5px;
+    font-size: 20x;
+}
+.modalOpen .padding{
+    padding: 5px;
+}
+
+.input_from{
+    width: 100%;
+    height: 55px;
+}
+
+input{
+    width: 100%;
+    box-sizing: border-box;
+    height: 48px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+input .padding{
+    padding: 5px;;
+}
+
+.send_button{
+    width: 100%;
+    min-width: 100px;
+    padding: 0px;
+    border-radius: 5px;
+    height: 52px;
+    font-size: 20px;
+    border-color: darkkhaki;
+    background-color: rgb(254, 255, 195);
+}
+
+.send_button:hover {
+    opacity: .7;
 }
 
 .modal{

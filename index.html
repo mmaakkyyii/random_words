@@ -13,20 +13,22 @@
             <canvas id="main_cnavas" width="100" height="200"></canvas>
         </div>
 
-        <form onsubmit="return button1Click()">
-            <input id="input1" type="text" name="name" value="もぁぱち"></input>
-        </form>
-        <button id="button1" onclick="button1Click();">put</button>
-        <button id="button2" onclick="button2Click();">clear</button>
+        <form  class="input_from"onsubmit="return button1Click()">
+            <input id="input1" type="text" class="from" name="name" value="もぁぱち"></input>
+        </form> 
+        <button id="button1" class="send_button"onclick="button1Click();">send</button>
+        <!--
+            <button id="button2" onclick="button2Click();">clear</button> 
+        -->
+        <br>
         <br>
 
 
         <a  id="modalOpen" class="modalOpen">このページについて</a>
-
         <div class="modal" id="modal">
             <h1>ぱちちぱちワード生成器</h1>
             <div class="modalContents">
-                ぱちぱち空想部に関するワードをランダムにつないで新しいワードが次々に浮かび上がってきます<br>
+                もぁぱちに関するワードをランダムにつないで新しいワードが次々に浮かび上がってきます<br>
                 いろいろ調整中
                 <br>
                 作者：@makyi_rie
