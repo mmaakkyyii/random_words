@@ -1,4 +1,4 @@
-const font_family_list = ["sans-serif","serif","cursive","fantasy","monospace"];
+const font_family_list = ["sans-serif","Noto Serif JP","serif","cursive","fantasy","monospace"];
 var text_array = new Array();
 
 $(document).ready(() => {
