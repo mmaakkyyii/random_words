@@ -1,11 +1,11 @@
 const express = require('express');
 const fs =require('fs');
 const DB =require('./data_access.js');
-let aa=[]
+
+
 let a=function(i){make_DB_json(i)};
-DB.PutWord2DB("ぱちぱち");
+//DB.PutWord2DB("ぱちぱち");
 //DB.GetDB(a);
-console.log(aa);
 
 const app = express();
 // パス指定用モジュール
