@@ -9,7 +9,9 @@ function button1Click() {
         if(window.confirm(text1+" を送信します")){
             AddText(text1);
             $.post("/",'name='+text1);    
+            alert("送信完了");
         }else{
+            alert("送信取り消し");
             return false;
         }
     }
