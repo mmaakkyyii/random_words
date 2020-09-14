@@ -1,6 +1,7 @@
 function button1Click() {
     let text1=document.getElementById('input1').value;
     AddText(text1);
+    //PutWord2DB(text1);
     return false;
 };
 
