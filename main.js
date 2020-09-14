@@ -18,8 +18,6 @@ app.listen(process.env.PORT ||8080, () => {
   console.log('Running at Port 8080...');
 });
 
-// 静的ファイルのルーティング
-app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/',(req,res)=>{
   console.log('accsess!');
@@ -27,6 +25,8 @@ app.get('/',(req,res)=>{
 
   res.sendFile(__dirname + '/public/index.html');
 });
+// 静的ファイルのルーティング
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 // その他のリクエストに対する404エラー
