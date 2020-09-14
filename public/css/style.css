@@ -58,13 +58,13 @@ input .padding{
         height: 90px;
     }
     input{
-        height: 80px;
+        height: 70px;
     }
     .modalOpen{
-        height: 80px;
+        height: 70px;
     }
     .send_button{
-        height: 80px;
+        height: 70px;
     }
  
 }
@@ -75,7 +75,7 @@ input .padding{
     left:50%;
     background-color: white;
     color: black;
-    padding:10px;
+    padding:5px;
     border-radius: 5px;
     transform: translate(-50%,-50%);
     z-index: 2;
@@ -93,7 +93,7 @@ h1{
 .modalContents{
     font-size: 20px;
     font-weight: normal;
-    margin: 30px;
+    margin: 20px;
  
 }
 

@@ -45,7 +45,7 @@ function AddText(text){
     if(text_array.length>200)return;
     var w = $( window ).width();
     var h = $( window ).height();
-    px=20+Math.floor(Math.random()*80);
+    px=20+Math.floor(Math.random()*60);
     let a=Math.floor(Math.random()*5);
     font_name="px "+font_family_list[1];
     var x=w*Math.random();
