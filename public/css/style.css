@@ -55,16 +55,16 @@ input .padding{
 @media screen and (max-width:480px) {
  
     .input_from{
-        height: 90px;
+        height: 150px;
     }
     input{
-        height: 70px;
+        height: 120px;
     }
     .modalOpen{
-        height: 70px;
+        height: 120px;
     }
     .send_button{
-        height: 70px;
+        height: 120px;
     }
  
 }
