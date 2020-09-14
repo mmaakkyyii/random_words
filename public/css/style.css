@@ -17,6 +17,7 @@
     color: black;
     font-size: 20x;
 }
+
 .modalOpen .padding{
     padding: 5px;
 }
@@ -50,6 +51,22 @@ input .padding{
 
 .send_button:hover {
     opacity: .7;
+}
+@media screen and (max-width:480px) {
+ 
+    .input_from{
+        height: 220px;
+    }
+    input{
+        height: 200px;
+    }
+    .modalOpen{
+        height: 200px;
+    }
+    .send_button{
+        height: 200px;
+    }
+ 
 }
 
 .modal{
