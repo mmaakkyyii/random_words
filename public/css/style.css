@@ -52,7 +52,7 @@ input .padding{
 .send_button:hover {
     opacity: .7;
 }
-@media screen and (max-width:480px) {
+@media screen and (max-width:500px) {
  
     .input_from{
         height: 200px;
@@ -64,7 +64,7 @@ input .padding{
         height: 150px;
     }
     .send_button{
-        height: 150px;
+        height: 300px;
     }
  
 }
