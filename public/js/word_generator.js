@@ -10,19 +10,7 @@ $.getJSON('DB.json',(data)=>{
     }
 
 })
-/*
-function getCSV(){
-    let req=new XMLHttpRequest();
-    req.open("get","DB/pachipachi_words.csv",true);
-    req.send(null);
-    console.log(req)
-    req.onload=function(){
-        console.log(req.responseText);
-    }
-}
-*/
 function GenerateWord(){
-    //getCSV();
     let i1=Math.floor(Math.random()*word_list.length);
     let i2=Math.floor(Math.random()*word_list.length);
     let i3=Math.floor(Math.random()*word_list2.length);
