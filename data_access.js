@@ -16,7 +16,7 @@ exports.GetDB= function (callback){
     if (err) {
       console.error('connection error', err.stack);
     } else {
-      console.log('connected');
+      console.log('connected in GetDB');
     }
   })
 
@@ -49,7 +49,7 @@ exports.PutWord2DB = function(text){
     if (err) {
       console.error('connection error', err.stack)
     } else {
-      console.log('connected')
+      console.log('connected in Put2Wird2DB')
     }
   })
 
